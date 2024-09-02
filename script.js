@@ -1,7 +1,7 @@
 const strangeArray = [
     "Zero",
     function () {
-      alert("Hola soy una función en un array");
+        alert("Hola soy una función en un array");
     },
     22,
     null,
@@ -11,33 +11,33 @@ const strangeArray = [
     "I'm programmer",
     -2000,
     "hello world",
-    `One is ${1}`,
+    "One is 1", // Cambiado para ser una cadena normal
     { name: "Info", lastname: "last info" },
     () => true,
     function showNumbers() {
-      return "1, 2, 3, 4";
+        return "1, 2, 3, 4";
     },
     "Another String",
     ["Hola mundo!"],
     "B is a letter",
     "JavaScript",
-  ];
-  
-  function showList(array) {
+];
+
+function showList(array) {
     const container = document.getElementById("list");
     container.innerHTML = "";
-  
+
     array.forEach((element) => {
-      const li = document.createElement("li");
-      li.appendChild(document.createTextNode(element));
-      container.appendChild(li);
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(element));
+        container.appendChild(li);
     });
-  }
-  
-  document.addEventListener("DOMContentLoaded", (e) => {
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     const filteredAndSortedArray = strangeArray
-      .filter(item => typeof item === 'string')
-      .sort((a, b) => a.localeCompare(b));
-  
+        .filter(item => typeof item === 'string')
+        .sort((a, b) => a.localeCompare(b));
+
     showList(filteredAndSortedArray);
-  });
+});
