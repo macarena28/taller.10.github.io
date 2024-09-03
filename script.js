@@ -1,4 +1,4 @@
-// Array extraño
+
 const strangeArray = [
     "Zero",
     function () {
@@ -12,7 +12,7 @@ const strangeArray = [
     "I'm programmer",
     -2000,
     "hello world",
-    "One is 1", // Asegúrate de que sea una cadena
+    "One is 1", 
     { name: "Info", lastname: "last info" },
     () => true,
     function showNumbers() {
@@ -24,7 +24,7 @@ const strangeArray = [
     "JavaScript",
 ];
 
-// Función para mostrar la lista en el elemento <ul>
+
 function showList(array) {
     const container = document.getElementById("list");
     container.innerHTML = "";
@@ -36,11 +36,10 @@ function showList(array) {
     });
 }
 
-// Filtrar y ordenar los elementos cuando el documento esté cargado
 document.addEventListener("DOMContentLoaded", () => {
     const filteredAndSortedArray = strangeArray
-        .filter(item => typeof item === 'string') // Filtrar solo las cadenas
-        .sort((a, b) => a.localeCompare(b)); // Ordenar alfabéticamente
+        .filter(item => typeof item === 'string') 
+        .sort((a, b) => a.localeCompare(b)); 
 
     showList(filteredAndSortedArray);
 });
